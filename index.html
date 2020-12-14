@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <title>Document</title>
+    <style>
+        .msg-container {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div><span id="ping"></span>ms</div>
+    <input type="text" id="message">
+    <button type="button" id="send">전송</button>
+    <button type="button" id="public">공지</button>
+    <div class="msg-container"></div>
+
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>
