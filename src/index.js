@@ -1,11 +1,13 @@
 const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXN0IjoiMTEiLCJlZWVlIjoiMjIiLCJpYXQiOjE2MDc0MTgwNzcsImV4cCI6MTYwNzUwNDQ3N30.jkOr60HToMBbc6iH0NNXlJXM06HquRp_Xb8HnfTP0_k"
 const socketOptions = {
+    path: "/all",
     auth: {
         token: token,
         id: Math.floor(Math.random() * 3)
     },
+    transports: ["websocket"],
 }
-const socket = require('socket.io-client')('http://localhost', socketOptions);
+const socket = require('socket.io-client')('ws://localhost', socketOptions);
 
 
 const message = document.getElementById("message")
